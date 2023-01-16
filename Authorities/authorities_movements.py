@@ -104,7 +104,7 @@ def search_arxes(arxh): #2 μονάδες
     starts=''
     arx=[]
     try:
-        with open('500arxes.data.csv') as f :
+        with open('500arxes.csv','r',encoding='utf-8') as f :
             starts = f.read()
     except IOError as e :
         print(e)
@@ -118,7 +118,7 @@ def load_arxes(): #2 μονάδες
     '''
     φορτώνει τις αρχές στο λεξικό arxes{}
     '''
-    with open('500arxes.data.csv') as f:
+    with open('500arxes.csv','r',encoding='utf-8') as f:
         text = f.read()
         pattern_name = r'(.*);'
         pattern_url = r';(.*)\n'
